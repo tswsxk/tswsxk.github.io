@@ -1,0 +1,35 @@
+{
+  "name": "tswsxk.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Shiwei Tong",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "webpack",
+    "build:watch": "webpack --watch",
+    "dev": "webpack-dev-server",
+    "type-check": "tsc",
+    "test": "jest"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/preset-typescript": "^7.3.3",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.1",
+    "jest": "^24.6.0",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "typescript": "^3.3.4000",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1"
+  }
+}
