@@ -11,7 +11,7 @@ def generate_html(source, target):
         head = f.read()
     with open("../sidebar.html") as f:
         sidebar = f.read()
-    with open(source) as f:
+    with io.open(source, encoding="utf-8") as f:
         body = f.read()
 
     template = Template(body)
