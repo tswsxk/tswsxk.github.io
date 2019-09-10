@@ -1,5 +1,20 @@
 # tswsxk.github.io
 
+Dependency
+
+```
+jinja2
+```
+
+Install required package and build the main.js
+
+```bash
+yarn install
+yarn build
+```
+
+Refer to [the tutorial for development](handbook/Architecture.html) for the detailed information about `yarn`
+
 Update the component in `src/` and run the following command to refresh all html in root directory.
 
 ```bash
