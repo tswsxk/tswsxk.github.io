@@ -18,6 +18,7 @@ def generate_html(source, target):
 
     with io.open("%s" % target, mode="w", encoding="utf-8") as wf:
         print(template.render(head=head, sidebar=sidebar), file=wf)
+        print("update %s" % target)
 
 
 if __name__ == '__main__':
