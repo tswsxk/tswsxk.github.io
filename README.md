@@ -24,3 +24,5 @@ git commit -m "update"
 git push
 ```
 
+[文档样式](https://github.com/d2l-ai/d2l-zh/blob/master/STYLE_GUIDE.md)
+
