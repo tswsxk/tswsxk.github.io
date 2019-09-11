@@ -8,5 +8,5 @@
 
 # [附录](appendix.md)
 
-# [Blog](index.html)
+# [docs](https://hb4dsai.readthedocs.io/zh/latest/)
 
