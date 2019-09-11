@@ -1,4 +1,4 @@
 theme: jekyll-theme-cayman
-title: Handbook for Data Science and Artifitial Intellegenge
+title: Handbook for Data Science and Artificial Intelligence
 include:
   - handbook/*.md
