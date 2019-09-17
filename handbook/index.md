@@ -6,7 +6,7 @@
 
 # [深度学习基础](DL.pdf)
 
-# [附录](appendix.md)
+# [附录](https://hb4dsai.readthedocs.io/zh/latest/Appendix)
 
 # [docs](https://hb4dsai.readthedocs.io/zh/latest/)
 
