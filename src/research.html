@@ -1,159 +1,207 @@
 <!doctype html>
 <html>
-    {{ head }}
-    <body>
-        <div class="wrapper">
-            {{sidebar}}
+{{ head }}
+<body>
+<div class="wrapper">
+    {{sidebar}}
 
-            <section>
-                <h2>Published Papers</h2>
-                <p><a style="margin:0; font-size:100%; font-weight:bold"
-                      href="https://tswsxk.github.io/research/paper/RAFG_Tao.pdf">
-                    A Radical-aware Attention-based Model for Chinese Text
-                    Classification
-                </a>
-                    <br>
-                    Hanqing Tao, <b>Shiwei Tong</b>, Hongke Zhao, Tong Xu,
-                    Binbin Jin, Qi Liu
-                    <br>
-                    In Proceedings of 33th AAAI Conference on Artificial
-                    Intelligence (AAAI'19), Honolulu, Hawaii, USA, 2019,
-                    Accepted.
-                    <br>
-                    <button class="accordion">
-                        Abstract
-                    </button>
-                </p>
-                <div class="panel"
-                     style="background-color: #F1F1F1; color: #666; padding: 10px;">
-                    Recent years, Chinese text
-                    classification has attracted more and more research
-                    attention. However, most existing techniques which
-                    specifically aim at English materials may lose effectiveness
-                    on this task due to the huge difference between
-                    Chinese and English. Actually, as a special kind of
-                    hieroglyphics, Chinese characters and radicals are
-                    semantically useful but still unexplored in the task of text
-                    classification. To that end, in this paper, we
-                    first analyze the motives of using multiple granularity
-                    features to represent a Chinese text
-                    by inspecting the characteristics of radicals, characters
-                    and words. For better representing the Chinese
-                    text and then implementing Chinese text classification, we
-                    propose a novel Radical-aware Attention-based
-                    Four-Granularity (RAFG) model to take full advantages of
-                    Chinese characters, words, character-level
-                    radicals, word-level radicals simultaneously. Specifically,
-                    RAFG applies a serialized BLSTM structure
-                    which is context-aware and able to capture the long-range
-                    information to model the character sharing
-                    property of Chinese and sequence characteristics in texts.
-                    Further, we design an attention mechanism to
-                    enhance the effects of radicals thus model the radical
-                    sharing property when integrating granularities.
-                    Finally, we conduct extensive experiments, where the
-                    experimental results not only show the superiority of
-                    our model, but also validate the effectiveness of radicals
-                    in the task of Chinese text classification
-                </div>
-                <p><a style="margin:0; font-size:100%; font-weight:bold">
-                    Exploiting Cognitive Structure for
-                    Adaptive Learning Recommender Systems
-                </a>
-                    <br>
-                    Qi Liu, <b>Shiwei Tong</b>, Chuanren Liu, Hongke Zhao,
-                    Enhong Chen, Haiping Ma, Shijin Wang
-                    <br>
-                    In Proceedings of 25th ACM SIGKDD Conference on
-                    Knowledge Discovery and Data Mining (KDD'19), Anchorage,
-                    Alaska, USA, 2019, Accepted.
-                    <br>
-                    <button class="accordion">
-                        Abstract
-                    </button>
-                </p>
-                <div class="panel"
-                     style="background-color: #F1F1F1; color: #666; padding: 10px;">
-                    Adaptive learning, also known as adaptive teaching, relies
-                    on learning path recommendation,
-                    which sequentially recommends personalized learning items
-                    (e.g., lectures, exercises) to satisfy
-                    the unique needs of each learner. Although it is well known
-                    that modeling the cognitive structure including
-                    knowledge level of learners and knowledge structure (e.g.,
-                    the prerequisite relations)
-                    of learning items is important for learning path
-                    recommendation, existing methods for
-                    adaptive learning often separately focus on either knowledge
-                    levels of learners or knowledge structure
-                    of learning items. To fully exploit the multifaceted
-                    cognitive structure for learning path recommendation,
-                    in this paper, we propose a
-                    <b>C</b>ognitive
-                    <b>S</b>tructure
-                    <b>E</b>nhanced
-                    framework
-                    <b>A</b>daptive
-                    <b>L</b>earning,
-                    named <b>CSEAL</b>.
-                    By viewing path recommendation as a Markov Decision Process
-                    (MDP) and applying an actor-critic algorithm, our framework
-                    can sequentially identify the right learning items to
-                    different learners. Specifically, we first utilize a
-                    recurrent neural network to
-                    trace the evolving knowledge levels of learners at each
-                    learning step. Then, we design a navigation algorithm on
-                    knowledge graph to
-                    ensure the logicality of learning paths, which can also
-                    reduce the search space in the decision process.
-                    Finally, the actor-critic algorithm is used to determine
-                    what to learn next, whose parameters are dynamically updated
-                    along the learning path. Extensive experiments with
-                    real-world data demonstrate the
-                    effectiveness and robustness of CSEAL in comparison with
-                    alternative approaches.
-                </div>
-
-                <hr>
-
-                <h2>Patent</h2>
-                <ul>
-                    <li>
-                        Enhong Chen, Qi Liu, Binbin Jin, Hongke Zhao, <b>Shiwei Tong</b>,
-                        《A Sorting Method for Community Question Answering Platforms》, Patent Number: 201810186972.2
-                    </li>
-                    <li>
-                        Enhong Chen, Qi Liu, Tong Xu, Hanqing Tao, <b>Shiwei Tong</b>,
-                        《A Method and System for Chinese Text Classification》
-                    </li>
-                </ul>
-
-                <hr>
-
-                <h2>Notebook</h2>
-                <ul>
-                    <li>
-                        <a href="https://tswsxk.github.io/research/survey/KG.pdf">
-                            Knowledge Graph
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://tswsxk.github.io/research/survey/WE.pdf">
-                            Language Representation
-                        </a>
-                    </li>
-                </ul>
-
-            </section>
-            <script>
-                var acc = document.getElementsByClassName("accordion");
-                var i;
-
-                for (i = 0; i < acc.length; i++) {
-                    acc[i].onclick = function () {
-                        this.classList.toggle("active");
-                        this.parentNode.nextElementSibling.classList.toggle("show");
-                    }
-                }
-            </script>
+    <section>
+        <h2>Published Papers</h2>
+        <p><a style="margin:0; font-size:100%; font-weight:bold"
+            href="https://dl.acm.org/doi/abs/10.1145/3292500.3330922">
+            Exploiting Cognitive Structure for
+            Adaptive Learning Recommender Systems
+        </a>
+            <br>
+            Qi Liu, <b>Shiwei Tong</b>, Chuanren Liu, Hongke Zhao,
+            Enhong Chen, Haiping Ma, Shijin Wang
+            <br>
+            In Proceedings of 25th ACM SIGKDD Conference on
+            Knowledge Discovery and Data Mining (KDD'19), Anchorage,
+            Alaska, USA, 2019, Accepted.
+            <br>
+            <button class="accordion">
+                Abstract
+            </button>
+        </p>
+        <div class="panel"
+             style="background-color: #F1F1F1; color: #666; padding: 10px;">
+            Adaptive learning, also known as adaptive teaching, relies
+            on learning path recommendation,
+            which sequentially recommends personalized learning items
+            (e.g., lectures, exercises) to satisfy
+            the unique needs of each learner. Although it is well known
+            that modeling the cognitive structure including
+            knowledge level of learners and knowledge structure (e.g.,
+            the prerequisite relations)
+            of learning items is important for learning path
+            recommendation, existing methods for
+            adaptive learning often separately focus on either knowledge
+            levels of learners or knowledge structure
+            of learning items. To fully exploit the multifaceted
+            cognitive structure for learning path recommendation,
+            in this paper, we propose a
+            <b>C</b>ognitive
+            <b>S</b>tructure
+            <b>E</b>nhanced
+            framework
+            <b>A</b>daptive
+            <b>L</b>earning,
+            named <b>CSEAL</b>.
+            By viewing path recommendation as a Markov Decision Process
+            (MDP) and applying an actor-critic algorithm, our framework
+            can sequentially identify the right learning items to
+            different learners. Specifically, we first utilize a
+            recurrent neural network to
+            trace the evolving knowledge levels of learners at each
+            learning step. Then, we design a navigation algorithm on
+            knowledge graph to
+            ensure the logicality of learning paths, which can also
+            reduce the search space in the decision process.
+            Finally, the actor-critic algorithm is used to determine
+            what to learn next, whose parameters are dynamically updated
+            along the learning path. Extensive experiments with
+            real-world data demonstrate the
+            effectiveness and robustness of CSEAL in comparison with
+            alternative approaches.
         </div>
+
+        <p><a style="margin:0; font-size:100%; font-weight:bold"
+              href="https://wvvw.aaai.org/ojs/index.php/AAAI/article/view/4446">
+            A Radical-aware Attention-based Model for Chinese Text
+            Classification
+        </a>
+            <br>
+            Hanqing Tao, <b>Shiwei Tong</b>, Hongke Zhao, Tong Xu,
+            Binbin Jin, Qi Liu
+            <br>
+            In Proceedings of 33th AAAI Conference on Artificial
+            Intelligence (AAAI'19), Honolulu, Hawaii, USA, 2019,
+            Accepted.
+            <br>
+            <button class="accordion">
+                Abstract
+            </button>
+        </p>
+        <div class="panel"
+             style="background-color: #F1F1F1; color: #666; padding: 10px;">
+            Recent years, Chinese text
+            classification has attracted more and more research
+            attention. However, most existing techniques which
+            specifically aim at English materials may lose effectiveness
+            on this task due to the huge difference between
+            Chinese and English. Actually, as a special kind of
+            hieroglyphics, Chinese characters and radicals are
+            semantically useful but still unexplored in the task of text
+            classification. To that end, in this paper, we
+            first analyze the motives of using multiple granularity
+            features to represent a Chinese text
+            by inspecting the characteristics of radicals, characters
+            and words. For better representing the Chinese
+            text and then implementing Chinese text classification, we
+            propose a novel Radical-aware Attention-based
+            Four-Granularity (RAFG) model to take full advantages of
+            Chinese characters, words, character-level
+            radicals, word-level radicals simultaneously. Specifically,
+            RAFG applies a serialized BLSTM structure
+            which is context-aware and able to capture the long-range
+            information to model the character sharing
+            property of Chinese and sequence characteristics in texts.
+            Further, we design an attention mechanism to
+            enhance the effects of radicals thus model the radical
+            sharing property when integrating granularities.
+            Finally, we conduct extensive experiments, where the
+            experimental results not only show the superiority of
+            our model, but also validate the effectiveness of radicals
+            in the task of Chinese text classification
+        </div>
+
+
+        <p><a style="margin:0; font-size:100%; font-weight:bold"
+            href="https://arxiv.org/abs/1906.04287">
+            Chinese Word Embedding via Morphological Information: A Dual-channel View
+        </a>
+            <br>
+            Hanqing Tao, <b>Shiwei Tong</b>, Tong Xu, Qi Liu, Enhong Chen,
+            <br>
+            JOURNAL OF CHINESE INFORMATION PROCESSING
+            <br>
+            <button class="accordion">
+                Abstract
+            </button>
+        </p>
+        <div class="panel"
+             style="background-color: #F1F1F1; color: #666; padding: 10px;">
+            Word embedding is a basic and very important topic in the field of Natural Language Processing. For Chinese,
+            which has the nature of pictographic representation, it is urgent to explore more interpretable strategies
+            to capture the language patterns in which morphological information is used to convey semantics. In this
+            paper, we elaborate that Chinese word embeddings can be substantially enhanced by the morphological
+            information hidden in
+            characters which is reflected not only in strokes order sequentially, but also in character glyphs
+            spatially. Then, we propose a novel Dual-channel Word Embedding model to realize the joint learning of
+            sequential and spatial information of Chinese
+            characters, so as to further enrich the representation of words. Through the evaluation on both word
+            similarity and word analogy
+            task, our model significantly outperforms other baseline methods and shows great interpretability.
+        </div>
+
+        <hr>
+
+        <h2>Patent</h2>
+        <ul>
+            <li>
+                Enhong Chen, Qi Liu, Binbin Jin, Hongke Zhao, <b>Shiwei Tong</b>,
+                《A sorting method for community question answering platforms》,
+                Patent Number: CN201810186972.2
+            </li>
+            <li>
+                Enhong Chen, Qi Liu, Tong Xu, Hanqing Tao, <b>Shiwei Tong</b>,
+                《A method and system for classifying Chinese texts》,
+                Patent Number: CN201811371967.5
+            </li>
+            <li>
+                Haiping Ma, Qi Liu, Enhong Chen, Shijin Wang, <b>Shiwei Tong</b>, Zhenya Huang,
+                《Adaptive learning method and device》,
+                Patent Number: CN201910584394.2
+            </li>
+            <li>
+                Enhong Chen, Qi Liu, Tong Xu, <b>Shiwei Tong</b>, Hanqing Tao,
+                《A Stroke and Glyph based Dual-channel method for Chinese Embedding》,
+                Patent Number: CN201910881062.0
+            </li>
+        </ul>
+
+        <hr>
+
+        <h2>Notebook</h2>
+        <ul>
+            <li>
+                <a href="https://tswsxk.github.io/research/survey/KG.pdf">
+                    Knowledge Graph
+                </a>
+            </li>
+            <li>
+                <a href="https://tswsxk.github.io/research/survey/WE.pdf">
+                    Language Representation
+                </a>
+            </li>
+            <li>
+                <a href="https://hb4dsai.readthedocs.io/zh/latest/">
+                    Handbook for Data Science and Artificial Intelligence
+                </a>
+            </li>
+        </ul>
+
+    </section>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].onclick = function () {
+                this.classList.toggle("active");
+                this.parentNode.nextElementSibling.classList.toggle("show");
+            }
+        }
+    </script>
+</div>

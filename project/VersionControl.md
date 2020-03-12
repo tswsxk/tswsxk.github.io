@@ -1,3 +1,0 @@
-# Version Control
-## Git
-TBA
