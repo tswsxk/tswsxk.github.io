@@ -1,28 +1,12 @@
-# 目录
+# [简介](overview.pdf)
 
-## 数据科学基础
+# [数据科学基础](DS.pdf)
 
-### 数据获取
+# [机器学习基础](ML.pdf)
 
-#### 检索
+# [深度学习基础](DL.pdf)
 
-#### [爬虫](Program/Crawler.html)
+# [附录](https://hb4dsai.readthedocs.io/zh/latest/Appendix)
 
-### 数据存储与读取
-
-#### [常见存储格式](DM/StorageFormat.html)
-
-##### 非结构化存储
-
-##### 半结构化存储
-
-##### 结构化存储
-
-## Artifitial Intellengence
-
-## 附录
-
-
-
-
+# [docs](https://hb4dsai.readthedocs.io/zh/latest/)
 
