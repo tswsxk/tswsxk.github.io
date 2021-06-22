@@ -77,5 +77,14 @@
                 this.parentNode.nextElementSibling.classList.toggle("show");
             }
         }
+        var bib_acc = document.getElementsByClassName("bib");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            bib_acc[i].onclick = function () {
+                this.classList.toggle("active");
+                this.parentNode.nextElementSibling.nextElementSibling.classList.toggle("show");
+            }
+        }
     </script>
 </div>

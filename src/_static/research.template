@@ -8,8 +8,15 @@
             <button class="accordion">
                 Abstract
             </button>
+            &nbsp
+            <button class="accordion bib">
+                BibTex
+            </button>
 </p>
 <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;">
     {{abstract}}
+</div>
+<div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;">
+    {{bib}}
 </div>
 
