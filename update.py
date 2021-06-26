@@ -5,7 +5,7 @@ from jinja2 import Template
 import io
 from pybtex.database.input import bibtex
 from copy import deepcopy
-from scripts.pattern import parse_pib
+from scripts.patent import parse_pib
 
 
 with open("head.html") as _f:
