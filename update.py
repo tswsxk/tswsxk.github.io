@@ -36,7 +36,7 @@ def format_research():
     return research
 
 
-def format_pattern():
+def format_patent():
     patents = parse_pib("src/_static/patent.pib")
 
     with open("src/_static/patent.template", encoding="utf-8") as f:
@@ -75,7 +75,7 @@ if __name__ == '__main__':
     for prefix in prefix_list:
         params = {}
         if prefix == "research":
-            params = {"research": format_research(), "pattern": format_pattern()}
+            params = {"research": format_research(), "patent": format_patent()}
         generate_html(
             source_dir + prefix + ".html",
             prefix + ".html",
