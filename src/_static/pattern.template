@@ -1,0 +1,9 @@
+<ul>
+    {% for p in pattern %}
+    <li>
+    {{p["en_authors"]}}.
+    {{p["en_name"]}}, {{p["en_status"]}},
+    {{p["number"]}}.
+    </li>
+    {% endfor %}
+</ul>
