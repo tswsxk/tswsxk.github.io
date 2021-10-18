@@ -139,6 +139,33 @@
   href={https://wvvw.aaai.org/ojs/index.php/AAAI/article/view/4446},
   address={Honolulu, Hawaii, USA}
 }
+@inproceedings{ma2021enhanced,
+  title={Enhanced Representation Learning for Examination Papers with Hierarchical Document Structure},
+  author={Ma, Yixiao and Tong, Shiwei and Liu, Ye and Wu, Likang and Liu, Qi and Chen, Enhong and Tong, Wei and Yan, Zi},
+  booktitle={Proceedings of the 44th International ACM SIGIR Conference on Research and Development in Information Retrieval},
+  pages={2156--2160},
+  year={2021},
+  abstract={
+  Representation learning of examination papers is the cornerstone of
+    the Examination Paper Analysis (EPA) in education area including
+    Paper Difficulty Prediction (PDR) and Finding Similar Papers (FSP).
+    Previous works mainly focus on the representation learning of each
+    test item, but few works notice the hierarchical document structure
+    in examination papers. To this end, in this paper, we propose a novel
+    Examination Organization Encoder (EOE) to learn a robust representation of the examination paper with the hierarchical document
+    structure. Specifically, we first propose a syntax parser to recover
+    the hierarchical document structure and convert an examination
+    paper to an Examination Organization Tree (EOT), where the test
+    items are the leaf nodes and the internal nodes are summarization
+    of their child nodes. Then, we applied a two-layer GRU-based module to obtain the representation of each leaf node. After that, we
+    design a subtree encoder module to aggregate the representation
+    of each leaf node, which is used to calculate an embedding for each
+    layer in the EOT. Finally, we feed all the layer embedding into an
+    output module, the process is over and we get the examination
+    paper representation that can be used for downstream tasks. Extensive experiments on real-world data demonstrate the effectiveness
+    and interpretability of our method.
+  }
+}
 @article{tao2019chinese,
   title={Chinese Embedding via Stroke and Glyph Information: A Dual-channel View},
   author={Tao, Hanqing and Tong, Shiwei and Xu, Tong and Liu, Qi and Chen, Enhong},
@@ -157,4 +184,30 @@
     similarity and word analogy
     task, our model significantly outperforms other baseline methods and shows great interpretability.
   },
+}
+@article{fangguided,
+  title={Guided Attention Network for Concept Extraction},
+  author={Fang, Songtao and Huang, Zhenya and He, Ming and Tong, Shiwei and Huang, Xiaoqing and Liu, Ye and Huang, Jie and Liu, Qi},
+  abstract={
+    Concept extraction aims to find words or phrases
+    describing a concept from massive texts. Recently,
+    researchers propose many neural network-based
+    methods to automatically extract concepts. Although these methods for this task show promising results, they ignore structured information in
+    the raw textual data (e.g., title, topic, and clue
+    words). In this paper, we propose a novel model,
+    named Guided Attention Concept Extraction Network (GACEN), which uses title, topic, and clue
+    words as additional supervision to provide guidance directly. Specifically, GACEN comprises two
+    attention networks, one of them is to gather the
+    relevant title and topic information for each context word in the document. The other one aims to
+    model the implicit connection between informative
+    words (clue words) and concepts. Finally, we aggregate information from two networks as input to
+    Conditional Random Field (CRF) to model dependencies in the output. We collected clue words for
+    three well-studied datasets. Extensive experiments
+    demonstrate that our model outperforms the baseline models with a large margin
+  },
+  booktitle={Inproceedings of 30th International Joint Conference on Artificial Intelligence},
+  year={2021},
+  abbr={IJCAI'21},
+  href={https://www.ijcai.org/proceedings/2021/0200.pdf},
+  address={Montreal-themed Virtual Reality}
 }
