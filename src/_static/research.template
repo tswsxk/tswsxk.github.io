@@ -1,0 +1,22 @@
+<p>
+    <a style="margin:0; font-size:100%; font-weight:bold" href="{{href}}"> {{title}} </a>
+    <br>
+        {{author}}
+    <br>
+        {{booktitle}}{{journal}}{% if abbr %} ({{abbr}}){% endif %}{% if address %}, {{address}}{% endif %}{% if year %}, {{year}}{% endif %}{% if volume %}, {{volume}}({{number}}): {{pages}}{% elif pages %}, {{pages}}{% endif %}.
+    <br>
+            <button class="accordion">
+                Abstract
+            </button>
+            &nbsp
+            <button class="accordion bib">
+                BibTex
+            </button>
+</p>
+<div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;">
+    {{abstract}}
+</div>
+<div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;">
+    {{bib}}
+</div>
+

@@ -1,0 +1,213 @@
+@inproceedings{tong2021item
+  title={Item Response Ranking for Cognitive Diagnosis},
+  author={Tong, Shiwei and Liu, Qi and Yu, Runlong and Huang, Wei and Huang, Zhenya and Zarchary, Pardos and Jiang, Weijie},
+  booktitle={Inproceedings of 30th International Joint Conference on Artificial Intelligence},
+  year={2021},
+  abstract={
+    Cognitive diagnosis, a fundamental task in education area, aims at providing an approach to reveal the proficiency level of students on knowledge concepts. Actually, monotonicity is one of the basic conditions in cognitive diagnosis theory, which assumes that student's proficiency is monotonic with the probability of giving the right response to a test item. However, few of previous methods consider the monotonicity during optimization. To this end, we propose Item Response Ranking framework (IRR), aiming at introducing pairwise learning into cognitive diagnosis to well model the monotonicity between item responses. Specifically, we first use an item specific sampling method to sample item responses and construct response pairs based on their partial order, where we propose the two-branch sampling methods to handle the unobserved responses. After that, we use a pairwise objective function to exploit the monotonicity in the pair formulation. In fact, IRR is a general framework which can be applied to most of contemporary cognitive diagnosis models. Extensive experiments demonstrate the effectiveness and interpretability of our method.
+  },
+  abbr={IJCAI'21},
+  href={http://home.ustc.edu.cn/~tongsw/files/IRR.pdf},
+  address={Montreal-themed Virtual Reality},
+}
+@inproceedings{tong2020structure,
+  title={Structure-based Knowledge Tracing: An Influence Propagation View},
+  author={Tong, Shiwei and Liu, Qi and Huang, Wei and Huang, Zhenya and Chen, Enhong and Liu, Chuanren and Ma, Haiping and Wang, Shijin},
+  booktitle={2020 IEEE International Conference on Data Mining (ICDM)},
+  pages={541--550},
+  year={2020},
+  organization={IEEE},
+  abstract={
+    Knowledge Tracing (KT) is a fundamental but challenging task in online education that traces learners' evolving knowledge states.
+    Much attention has been drawn to this area and several works such as Bayesian and Deep Knowledge Tracing have been proposed.
+    Recent works have explored the value of relations among concepts and proposed to introduce knowledge structure into KT tasks.
+    However, the propagated influence among concepts, which has been shown to be a key factor in human learning by the educational theories, is still under-explored.
+    In this paper, we propose a new framework called Structure-based Knowledge Tracing (SKT), which exploits the multiple relations in knowledge structure to model the influence propagation among concepts.
+    In the SKT framework, we consider both the temporal effect on the exercising sequence and the spatial effect on the knowledge structure.
+    We take advantages of two novel formulations in modeling the influence propagation on the knowledge structure with multiple relations.
+    For undirected relations such as similarity relations, the synchronization propagation method is adopted, where the influence propagates bidirectionally between neighbor concepts.
+    For directed relations such as prerequisite relations, the partial propagation method is applied, where the influence can only unidirectionally propagate from a predecessor to a successor.
+    Meanwhile, we employ the gated functions to update the states of concepts temporally and spatially.
+    We demonstrate the effectiveness and interpretability of SKT with extensive experiments.
+  },
+  href={http://home.ustc.edu.cn/~tongsw/files/SKT.pdf},
+}
+@inproceedings{liu2019exploiting,
+  title={Exploiting cognitive structure for adaptive learning},
+  author={Liu, Qi and Tong, Shiwei and Liu, Chuanren and Zhao, Hongke and Chen, Enhong and Ma, Haiping and Wang, Shijin},
+  booktitle={Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining},
+  abbr={KDD'19},
+  pages={627--635},
+  year={2019},
+  abstract={
+    Adaptive learning, also known as adaptive teaching, relies
+    on learning path recommendation,
+    which sequentially recommends personalized learning items
+    (e.g., lectures, exercises) to satisfy
+    the unique needs of each learner. Although it is well known
+    that modeling the cognitive structure including
+    knowledge level of learners and knowledge structure (e.g.,
+    the prerequisite relations)
+    of learning items is important for learning path
+    recommendation, existing methods for
+    adaptive learning often separately focus on either knowledge
+    levels of learners or knowledge structure
+    of learning items. To fully exploit the multifaceted
+    cognitive structure for learning path recommendation,
+    in this paper, we propose a
+    <b>C</b>ognitive
+    <b>S</b>tructure
+    <b>E</b>nhanced
+    framework
+    <b>A</b>daptive
+    <b>L</b>earning,
+    named <b>CSEAL</b>.
+    By viewing path recommendation as a Markov Decision Process
+    (MDP) and applying an actor-critic algorithm, our framework
+    can sequentially identify the right learning items to
+    different learners. Specifically, we first utilize a
+    recurrent neural network to
+    trace the evolving knowledge levels of learners at each
+    learning step. Then, we design a navigation algorithm on
+    knowledge graph to
+    ensure the logicality of learning paths, which can also
+    reduce the search space in the decision process.
+    Finally, the actor-critic algorithm is used to determine
+    what to learn next, whose parameters are dynamically updated
+    along the learning path. Extensive experiments with
+    real-world data demonstrate the
+    effectiveness and robustness of CSEAL in comparison with
+    alternative approaches.
+  },
+  href={https://dl.acm.org/doi/abs/10.1145/3292500.3330922},
+  address={Anchorage, Alaska, USA},
+}
+@inproceedings{tao2021ideography,
+  title={Ideography Leads Us to the Field of Cognition: A Radical-Guided Associative Model for Chinese Text Classification},
+  author={Tao, Hanqing and Tong, Shiwei and Zhang, Kun and Xu, Tong and Liu, Qi and Chen, Enhong and Hou, Min},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={35},
+  number={15},
+  pages={13898--13906},
+  year={2021},
+  abstract={
+    Cognitive psychology research shows that humans have the instinct for abstract thinking, where association plays an essential role in language comprehension. Especially for Chinese, its ideographic writing system allows radicals to trigger semantic association without the need of phonetics. In fact, subconsciously using the associative information guided by radicals is a key for readers to ensure the robustness of semantic understanding. Fortunately, many basic and extended concepts related to radicals are systematically included in Chinese language dictionaries, which leaves a handy but unexplored way for improving Chinese text representation and classification. To this end, we draw inspirations from cognitive principles between ideography and human associative behavior to propose a novel Radical-guided Associative Model (RAM) for Chinese text classification. RAM comprises two coupled spaces, namely Literal Space and Associative Space, which imitates the real process in people's mind when understanding a Chinese text. To be specific, we first devise a serialized modeling structure in Literal Space to thoroughly capture the sequential information of Chinese text. Then, based on the authoritative information provided by Chinese language dictionaries, we design an association module and put forward a strategy called Radical-Word Association to use ideographic radicals as the medium to associate prior concept words in Associative Space. Afterwards, we design an attention module to imitate people's matching and decision between Literal Space and Associative Space, which can balance the importance of each associative words under specific contexts. Finally, extensive experiments on two real-world datasets prove the effectiveness and rationality of RAM, with good cognitive insights for future language modeling.
+  },
+  abbr={AAAI'21},
+  href={https://www.aaai.org/AAAI21Papers/AAAI-5126.TaoH.pdf},
+}
+@inproceedings{tao2019radical,
+  title={A radical-aware attention-based model for chinese text classification},
+  author={Tao, Hanqing and Tong, Shiwei and Zhao, Hongke and Xu, Tong and Jin, Binbin and Liu, Qi},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={33},
+  number={01},
+  pages={5125--5132},
+  year={2019},
+  abbr={AAAI'19},
+  abstract={
+    Recent years, Chinese text
+    classification has attracted more and more research
+    attention. However, most existing techniques which
+    specifically aim at English materials may lose effectiveness
+    on this task due to the huge difference between
+    Chinese and English. Actually, as a special kind of
+    hieroglyphics, Chinese characters and radicals are
+    semantically useful but still unexplored in the task of text
+    classification. To that end, in this paper, we
+    first analyze the motives of using multiple granularity
+    features to represent a Chinese text
+    by inspecting the characteristics of radicals, characters
+    and words. For better representing the Chinese
+    text and then implementing Chinese text classification, we
+    propose a novel Radical-aware Attention-based
+    Four-Granularity (RAFG) model to take full advantages of
+    Chinese characters, words, character-level
+    radicals, word-level radicals simultaneously. Specifically,
+    RAFG applies a serialized BLSTM structure
+    which is context-aware and able to capture the long-range
+    information to model the character sharing
+    property of Chinese and sequence characteristics in texts.
+    Further, we design an attention mechanism to
+    enhance the effects of radicals thus model the radical
+    sharing property when integrating granularities.
+    Finally, we conduct extensive experiments, where the
+    experimental results not only show the superiority of
+    our model, but also validate the effectiveness of radicals
+    in the task of Chinese text classification
+  },
+  href={https://wvvw.aaai.org/ojs/index.php/AAAI/article/view/4446},
+  address={Honolulu, Hawaii, USA}
+}
+@inproceedings{ma2021enhanced,
+  title={Enhanced Representation Learning for Examination Papers with Hierarchical Document Structure},
+  author={Ma, Yixiao and Tong, Shiwei and Liu, Ye and Wu, Likang and Liu, Qi and Chen, Enhong and Tong, Wei and Yan, Zi},
+  booktitle={Proceedings of the 44th International ACM SIGIR Conference on Research and Development in Information Retrieval},
+  pages={2156--2160},
+  year={2021},
+  abstract={
+  Representation learning of examination papers is the cornerstone of
+    the Examination Paper Analysis (EPA) in education area including
+    Paper Difficulty Prediction (PDR) and Finding Similar Papers (FSP).
+    Previous works mainly focus on the representation learning of each
+    test item, but few works notice the hierarchical document structure
+    in examination papers. To this end, in this paper, we propose a novel
+    Examination Organization Encoder (EOE) to learn a robust representation of the examination paper with the hierarchical document
+    structure. Specifically, we first propose a syntax parser to recover
+    the hierarchical document structure and convert an examination
+    paper to an Examination Organization Tree (EOT), where the test
+    items are the leaf nodes and the internal nodes are summarization
+    of their child nodes. Then, we applied a two-layer GRU-based module to obtain the representation of each leaf node. After that, we
+    design a subtree encoder module to aggregate the representation
+    of each leaf node, which is used to calculate an embedding for each
+    layer in the EOT. Finally, we feed all the layer embedding into an
+    output module, the process is over and we get the examination
+    paper representation that can be used for downstream tasks. Extensive experiments on real-world data demonstrate the effectiveness
+    and interpretability of our method.
+  }
+}
+@article{tao2019chinese,
+  title={Chinese Embedding via Stroke and Glyph Information: A Dual-channel View},
+  author={Tao, Hanqing and Tong, Shiwei and Xu, Tong and Liu, Qi and Chen, Enhong},
+  journal={JOURNAL OF CHINESE INFORMATION PROCESSING},
+  year={2019},
+  abstract={
+    Word embedding is a basic and very important topic in the field of Natural Language Processing. For Chinese,
+    which has the nature of pictographic representation, it is urgent to explore more interpretable strategies
+    to capture the language patterns in which morphological information is used to convey semantics. In this
+    paper, we elaborate that Chinese word embeddings can be substantially enhanced by the morphological
+    information hidden in
+    characters which is reflected not only in strokes order sequentially, but also in character glyphs
+    spatially. Then, we propose a novel Dual-channel Word Embedding model to realize the joint learning of
+    sequential and spatial information of Chinese
+    characters, so as to further enrich the representation of words. Through the evaluation on both word
+    similarity and word analogy
+    task, our model significantly outperforms other baseline methods and shows great interpretability.
+  },
+}
+@article{fangguided,
+  title={Guided Attention Network for Concept Extraction},
+  author={Fang, Songtao and Huang, Zhenya and He, Ming and Tong, Shiwei and Huang, Xiaoqing and Liu, Ye and Huang, Jie and Liu, Qi},
+  abstract={
+    Concept extraction aims to find words or phrases
+    describing a concept from massive texts. Recently,
+    researchers propose many neural network-based
+    methods to automatically extract concepts. Although these methods for this task show promising results, they ignore structured information in
+    the raw textual data (e.g., title, topic, and clue
+    words). In this paper, we propose a novel model,
+    named Guided Attention Concept Extraction Network (GACEN), which uses title, topic, and clue
+    words as additional supervision to provide guidance directly. Specifically, GACEN comprises two
+    attention networks, one of them is to gather the
+    relevant title and topic information for each context word in the document. The other one aims to
+    model the implicit connection between informative
+    words (clue words) and concepts. Finally, we aggregate information from two networks as input to
+    Conditional Random Field (CRF) to model dependencies in the output. We collected clue words for
+    three well-studied datasets. Extensive experiments
+    demonstrate that our model outperforms the baseline models with a large margin
+  },
+  booktitle={Inproceedings of 30th International Joint Conference on Artificial Intelligence},
+  year={2021},
+  abbr={IJCAI'21},
+  href={https://www.ijcai.org/proceedings/2021/0200.pdf},
+  address={Montreal-themed Virtual Reality}
+}
