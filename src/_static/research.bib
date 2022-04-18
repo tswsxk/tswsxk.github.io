@@ -185,6 +185,49 @@
     task, our model significantly outperforms other baseline methods and shows great interpretability.
   },
 }
+@inproceedings{huang2021stan,
+  title={STAN: Adversarial Network for Cross-domain Question Difficulty Prediction},
+  author={Huang, Ye and Huang, Wei and Tong, Shiwei and Huang, Zhenya and Liu, Qi and Chen, Enhong and Ma, Jianhui and Wan, Liang and Wang, Shijin},
+  abstract={
+    In intelligent education systems, question difficulty
+    prediction (QDP) is a fundamental task of many applications,
+    such as personalized question recommendation and test paper
+    analysis. Previous work mainly focus on data-driven QDP methods, which are heavily relied on the large-scale labeled dataset of
+    courses. To alleviate the labor intensity, an intuitive method is to
+    introduce domain adaptation into QDP and consider each course
+    as a domain. In educational psychology, there are two factors
+    influencing difficulty common to different courses: the obstacles
+    of comprehending the question and generating a response, namely
+    stimulus and task difficulty. To this end, we propose a novel
+    Stimulus and Task difficulty-based Adversarial Network (STAN)
+    that models question difficulty from the views of stimulus and
+    task. Then, in order to align the difficulty distribution of the
+    source domain and the target domain, we utilize the conditional
+    adversarial learning with readability-enhanced pseudo-labels.
+    Meanwhile, we proposed a sampling method based on density
+    estimation to implicit alignment. Finally, we conduct experiments
+    on the real questions datasets to evaluate the effectiveness of
+    our QDP model and domain adaptation method. Our method
+    significantly improves accuracy over state-of-the-art methods on
+    real-world question data of multiple courses.
+  },
+  booktitle={2021 IEEE International Conference on Data Mining (ICDM)},
+  pages={220--229},
+  year={2021},
+  organization={IEEE}
+}
+@inproceedings{lei2021consistency,
+  title={Consistency-aware Multi-modal Network for Hierarchical Multi-label Classification in Online Education System},
+  author={Lei, Siqi and Huang, Wei and Tong, Shiwei and Liu, Qi and Huang, Zhenya and Chen, Enhong and Su, Yu},
+  abstract={
+    In the online education system, predicting the knowledge of exercises is a fundamental task of many applications, such as cognitive diagnosis. Usually, experts consider this problem as Hierarchical Multi-label Classification (HMC), since the knowledge concepts exhibit a multi-level structure. However, existing methods either sacrificed knowledge consistency for classification accuracy or sacrificed classification accuracy for knowledge consistency. Maintaining the balance is difficult. To forgo this dilemma, in this paper, we develop a novel frame-work called Consistency-Aware Multi-modal Network (Cam-Net). Specifically, we develop a multi-modal embedding module to learn the representation of the multi-modal exercise. Then, we adopt a hybrid prediction method consisting of the flat prediction module and the local prediction module. The local prediction module deals with the relation between the knowledge hierarchy and the input exercise. The flat prediction module focuses on maintaining knowledge consistency. Finally, to balance classification accuracy and knowledge consistency, we combine the outputs of two modules to make a final prediction. Extensive experimental results on two real-world datasets demonstrate the high performance and the ability to reduce knowledge inconsistency of CamNet.
+  },
+  booktitle={2021 IEEE International Conference on Big Knowledge (ICBK)},
+  pages={1--8},
+  year={2021},
+  organization={IEEE},
+  tag={Best Student Paper}
+}
 @article{fangguided,
   title={Guided Attention Network for Concept Extraction},
   author={Fang, Songtao and Huang, Zhenya and He, Ming and Tong, Shiwei and Huang, Xiaoqing and Liu, Ye and Huang, Jie and Liu, Qi},
@@ -203,7 +246,7 @@
     words (clue words) and concepts. Finally, we aggregate information from two networks as input to
     Conditional Random Field (CRF) to model dependencies in the output. We collected clue words for
     three well-studied datasets. Extensive experiments
-    demonstrate that our model outperforms the baseline models with a large margin
+    demonstrate that our model outperforms the baseline models with a large margin.
   },
   booktitle={Inproceedings of 30th International Joint Conference on Artificial Intelligence},
   year={2021},
