@@ -6,7 +6,7 @@ import io
 from pybtex.database.input import bibtex
 from copy import deepcopy
 from scripts.patent import parse_pib
-
+import itertools as it
 
 with open("head.html") as _f:
     head = _f.read()
@@ -14,17 +14,22 @@ with open("sidebar.html") as _f:
     sidebar = _f.read()
 
 
-def format_research():
-    parser = bibtex.Parser()
-    entries = parser.parse_file(r"src\_static\research.bib").entries
+def sort_entries(entries, by=None):
+    if by is None:
+        return entries
+    elif by == "default":
+        return sorted(entries, key=lambda x: (-x[2], x[1]), reverse=True)
+    elif by == "time":
+        return sorted(entries, key=lambda x: x[1], reverse=True)
+    else:
+        raise ValueError()
 
-    with open("src/_static/research.template") as f:
-        template = Template(f.read())
 
-    research = ""
-    for entry in entries.values():
+def format_entries(entries):
+    for entry in entries:
         authors = list(entry.persons.values())[0]
         authors = ["%s %s" % ("".join(author.first_names), "".join(author.last_names)) for author in authors]
+        my_index = authors.index("Shiwei Tong")
         authors = [author if author != "Shiwei Tong" else "<b>%s</b>" % author for author in authors]
         bib_entry = deepcopy(entry)
         for name in ["abbr", "abstract", "href", "address"]:
@@ -32,7 +37,33 @@ def format_research():
                 del bib_entry.fields[name]
         bib = bib_entry.to_string('bibtex')[:-1].replace("\n", "<br>&nbsp&nbsp&nbsp&nbsp")
         bib = re.sub(r"\"(.*?)\"", r"{\1}", bib)
-        research += template.render(author=", ".join(authors), bib=bib, **entry.fields)
+        yield (
+            dict(author=", ".join(authors), bib=bib, **entry.fields),
+            bib_entry.fields["year"],
+            my_index
+        )
+
+
+def format_research():
+    parser = bibtex.Parser()
+    first_entries = parser.parse_file(r"src/_static/first_research.bib").entries
+    first_len = len(first_entries.values())
+    entries = parser.parse_file(r"src/_static/research.bib").entries
+
+    with open("src/_static/research.template") as f:
+        template = Template(f.read())
+
+    research = ""
+    first_entries = format_entries(list(first_entries.values())[:first_len])
+    entries = sort_entries(format_entries(list(entries.values())[first_len:]), by="default")
+    for i, entry in enumerate(
+            sort_entries(
+                it.chain(first_entries, entries),
+                # by="time"
+            )
+    ):
+        entry = entry[0]
+        research += template.render(no=i+1, **entry)
     return research
 
 

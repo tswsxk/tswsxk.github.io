@@ -1,0 +1,135 @@
+@inproceedings{DBLP:conf/kdd/TongLHHWLHCZ22,
+  author    = {Shiwei Tong and
+               Jiayu Liu and
+               Yuting Hong and
+               Zhenya Huang and
+               Le Wu and
+               Qi Liu and
+               Wei Huang and
+               Enhong Chen and
+               Dan Zhang},
+  editor    = {Aidong Zhang and
+               Huzefa Rangwala},
+  title     = {Incremental Cognitive Diagnosis for Intelligent Education},
+  booktitle = {{KDD} '22: The 28th {ACM} {SIGKDD} Conference on Knowledge Discovery
+               and Data Mining, Washington, DC, USA, August 14 - 18, 2022},
+  pages     = {1760--1770},
+  publisher = {{ACM}},
+  year      = {2022},
+  url       = {https://doi.org/10.1145/3534678.3539399},
+  doi       = {10.1145/3534678.3539399},
+  timestamp = {Fri, 11 Nov 2022 09:36:56 +0100},
+  biburl    = {https://dblp.org/rec/conf/kdd/TongLHHWLHCZ22.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  abstract={
+    Cognitive diagnosis, aiming at providing an approach to reveal the
+    proficiency level of learners on knowledge concepts, plays an important role in intelligent education area and has recently received
+    more and more attention. Although a number of works have been
+    proposed in recent years, most of contemporary works acquire
+    the traits parameters of learners and items in a transductive way,
+    which are only suitable for stationary data. However, in the real
+    scenario, the data is collected online, where learners, test items and
+    interactions usually grow continuously, which can rarely meet the
+    stationary condition. To this end, we propose a novel framework,
+    Incremental Cognitive Diagnosis (ICD), to tailor cognitive diagnosis into the online scenario of intelligent education. Specifically,
+    we first design a Deep Trait Network (DTN), which acquires the
+    trait parameters in an inductive way rather than a transductive
+    way. Then, we propose an Incremental Update Algorithm (IUA) to balance the effectiveness and training efficiency. We carry out
+    Turning Point (TP) analysis to reduce update frequency, where we
+    derive the minimum update condition based on the monotonicity
+    theory of cognitive diagnosis. Meanwhile, we use a momentum
+    update strategy on the incremental data to decrease update time
+    without sacrificing effectiveness. Moreover, to keep the trait parameters as stable as possible, we refine the loss function in the
+    incremental updating stage. Last but no least, our ICD is a general
+    framework which can be applied to most of contemporary cognitive
+    diagnosis models. To the best of our knowledge, this is the first
+    attempt to investigate the incremental cognitive diagnosis problem
+    with theoretical results about the update condition and a tailored
+    incremental learning strategy. Extensive experiments demonstrate
+    the effectiveness and robustness of our method.
+  }
+}
+@inproceedings{tong2021item,
+  title={Item Response Ranking for Cognitive Diagnosis},
+  author={Tong, Shiwei and Liu, Qi and Yu, Runlong and Huang, Wei and Huang, Zhenya and Zarchary, Pardos and Jiang, Weijie},
+  booktitle={Inproceedings of 30th International Joint Conference on Artificial Intelligence},
+  year={2021},
+  abstract={
+    Cognitive diagnosis, a fundamental task in education area, aims at providing an approach to reveal the proficiency level of students on knowledge concepts. Actually, monotonicity is one of the basic conditions in cognitive diagnosis theory, which assumes that student's proficiency is monotonic with the probability of giving the right response to a test item. However, few of previous methods consider the monotonicity during optimization. To this end, we propose Item Response Ranking framework (IRR), aiming at introducing pairwise learning into cognitive diagnosis to well model the monotonicity between item responses. Specifically, we first use an item specific sampling method to sample item responses and construct response pairs based on their partial order, where we propose the two-branch sampling methods to handle the unobserved responses. After that, we use a pairwise objective function to exploit the monotonicity in the pair formulation. In fact, IRR is a general framework which can be applied to most of contemporary cognitive diagnosis models. Extensive experiments demonstrate the effectiveness and interpretability of our method.
+  },
+  abbr={IJCAI'21},
+  href={http://home.ustc.edu.cn/~tongsw/files/IRR.pdf},
+  address={Montreal-themed Virtual Reality},
+}
+@inproceedings{tong2020structure,
+  title={Structure-based Knowledge Tracing: An Influence Propagation View},
+  author={Tong, Shiwei and Liu, Qi and Huang, Wei and Huang, Zhenya and Chen, Enhong and Liu, Chuanren and Ma, Haiping and Wang, Shijin},
+  booktitle={2020 IEEE International Conference on Data Mining (ICDM)},
+  pages={541--550},
+  year={2020},
+  organization={IEEE},
+  abstract={
+    Knowledge Tracing (KT) is a fundamental but challenging task in online education that traces learners' evolving knowledge states.
+    Much attention has been drawn to this area and several works such as Bayesian and Deep Knowledge Tracing have been proposed.
+    Recent works have explored the value of relations among concepts and proposed to introduce knowledge structure into KT tasks.
+    However, the propagated influence among concepts, which has been shown to be a key factor in human learning by the educational theories, is still under-explored.
+    In this paper, we propose a new framework called Structure-based Knowledge Tracing (SKT), which exploits the multiple relations in knowledge structure to model the influence propagation among concepts.
+    In the SKT framework, we consider both the temporal effect on the exercising sequence and the spatial effect on the knowledge structure.
+    We take advantages of two novel formulations in modeling the influence propagation on the knowledge structure with multiple relations.
+    For undirected relations such as similarity relations, the synchronization propagation method is adopted, where the influence propagates bidirectionally between neighbor concepts.
+    For directed relations such as prerequisite relations, the partial propagation method is applied, where the influence can only unidirectionally propagate from a predecessor to a successor.
+    Meanwhile, we employ the gated functions to update the states of concepts temporally and spatially.
+    We demonstrate the effectiveness and interpretability of SKT with extensive experiments.
+  },
+  href={http://home.ustc.edu.cn/~tongsw/files/SKT.pdf},
+}
+@inproceedings{liu2019exploiting,
+  title={Exploiting cognitive structure for adaptive learning},
+  author={Liu, Qi and Tong, Shiwei and Liu, Chuanren and Zhao, Hongke and Chen, Enhong and Ma, Haiping and Wang, Shijin},
+  booktitle={Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining},
+  abbr={KDD'19},
+  pages={627--635},
+  year={2019},
+  abstract={
+    Adaptive learning, also known as adaptive teaching, relies
+    on learning path recommendation,
+    which sequentially recommends personalized learning items
+    (e.g., lectures, exercises) to satisfy
+    the unique needs of each learner. Although it is well known
+    that modeling the cognitive structure including
+    knowledge level of learners and knowledge structure (e.g.,
+    the prerequisite relations)
+    of learning items is important for learning path
+    recommendation, existing methods for
+    adaptive learning often separately focus on either knowledge
+    levels of learners or knowledge structure
+    of learning items. To fully exploit the multifaceted
+    cognitive structure for learning path recommendation,
+    in this paper, we propose a
+    <b>C</b>ognitive
+    <b>S</b>tructure
+    <b>E</b>nhanced
+    framework
+    <b>A</b>daptive
+    <b>L</b>earning,
+    named <b>CSEAL</b>.
+    By viewing path recommendation as a Markov Decision Process
+    (MDP) and applying an actor-critic algorithm, our framework
+    can sequentially identify the right learning items to
+    different learners. Specifically, we first utilize a
+    recurrent neural network to
+    trace the evolving knowledge levels of learners at each
+    learning step. Then, we design a navigation algorithm on
+    knowledge graph to
+    ensure the logicality of learning paths, which can also
+    reduce the search space in the decision process.
+    Finally, the actor-critic algorithm is used to determine
+    what to learn next, whose parameters are dynamically updated
+    along the learning path. Extensive experiments with
+    real-world data demonstrate the
+    effectiveness and robustness of CSEAL in comparison with
+    alternative approaches.
+  },
+  href={https://dl.acm.org/doi/abs/10.1145/3292500.3330922},
+  address={Anchorage, Alaska, USA},
+}
